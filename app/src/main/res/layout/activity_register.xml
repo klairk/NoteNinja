@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.RegisterActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/registerTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textSize="50dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/bold"
+                android:layout_marginTop="100dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/regular"
+                app:layout_constraintTop_toBottomOf="@+id/registerTV"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/firstNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter First Name"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/edittext"
+                android:paddingVertical="10dp"
+                android:maxLines="1"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                android:fontFamily="@font/medium"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:textColorHint="@color/white"/>
+
+            <TextView
+                android:id="@+id/lastNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameET"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/lastNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Last Name"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameTV"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/edittext"
+                android:paddingVertical="10dp"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:fontFamily="@font/medium"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:textColorHint="@color/white"/>
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameET"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext"
+                android:fontFamily="@font/medium"
+                android:hint="Enter Email"
+                android:maxLines="1"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/emailTV"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <TextView
+                android:id="@+id/passwordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                app:layout_constraintTop_toBottomOf="@+id/emailET"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/edittext"
+                android:layout_marginTop="10dp"
+                app:boxStrokeWidth="0dp"
+                app:passwordToggleTint="@color/grey"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTV"
+                app:layout_constraintStart_toStartOf="parent"
+                android:elevation="6dp"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwordsET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:layout_marginTop="12dp"
+                    android:hint="Password"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/regular"
+                    android:paddingVertical="14dp"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/passwordcTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEt"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordcEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/edittext"
+                android:layout_marginTop="10dp"
+                app:boxStrokeWidth="0dp"
+                app:passwordToggleTint="@color/grey"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/passwordcTV"
+                app:layout_constraintStart_toStartOf="parent"
+                android:elevation="6dp"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwordscET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:layout_marginTop="12dp"
+                    android:hint="Password"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/regular"
+                    android:paddingVertical="14dp"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btsignin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:text="Register"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:background="@drawable/button"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/passwordcEt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="30dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

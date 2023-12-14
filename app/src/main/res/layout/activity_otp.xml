@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.OtpActivity">
+
+
+    <TextView
+        android:id="@+id/otpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/bold"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the 4 digits code that you received on\n your email."
+        android:textSize="15dp"
+        android:textColor="@color/grey"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/regular"
+        app:layout_constraintTop_toBottomOf="@+id/otpTV"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:textColor="@color/white"
+        app:bar_enabled="false"
+        app:height="50sp"
+        app:length="4"
+        android:layout_marginTop="40dp"
+        android:elevation="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        app:layout_constraintStart_toStartOf="@+id/nameTV"
+        app:otp_box_background="@drawable/edittext"
+        app:otp_text_size="14sp"
+        app:width="45dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:background="@drawable/button"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/otp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
